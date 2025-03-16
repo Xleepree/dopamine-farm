@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>index.</title>
+        <link rel="stylesheet" href="global.css">
+        <script src="global.js" defer></script>
+    </head>
+
+    <body>
+        <div class="mainDiv">
+            <h1>number clicker</h1>
+            <p>clicky for the dopamine</p>
+        </div>
+
+        <div class="pointCounter" onclick="increasePoints()">
+            <h1 id="points">0</h1>
+        </div>
+
+        <div class="mainDiv">
+            <hr>
+            <button onclick="savePoints()">save points</button>
+            <button onclick="loadPoints()">load points</button>
+            <button onclick="resetPoints()">reset points</button>
+            <button id="upgradeButton" onclick="upgradeClickPower()">x2 click power (100)</button>
+            <hr>
+            <a href="https://xleepree.pages.dev">made by xleepree</a> //
+            <a href="https://github.com/Xleepree/dopamine-farm">repository</a> //
+            <a href="changelog.html">changelog</a>
+
+        </div>
+    </body>
+
+</html>
