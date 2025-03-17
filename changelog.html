@@ -17,13 +17,27 @@
             <article>
                 <h2>v1.01</h2>
                 <p><small>3-17-2025</small></p>
-                <p>small hotfix:<br>
-                the clicker thing would be able to selected on different platforms so i fixed that!</p>
+                <p>issue:<br>
+                point box number could be selected in safari (and IE but that's irrelevant)<br>
+                i do not like that.<br>
+                fix: </p>
+                <div class="codeDiv">
+                    <p><small>global.css > .pointCounter</small><br>
+                    <br> 
+                    user-select: none;<br>
+                    -webkit-user-select: none; /* safari */<br>
+                    -ms-user-select: none; /* IE: still added it */</p>
+                </div>
+                <p>*Not the actual or full code.<br>
+                fun fact: i was confused why it was still selectable in safari and it was because i put<br>
+                <i>webkit-user-select</i><br>
+                instead of<br>
+                -webkit-user-select</p>
             </article>
             
             <article>
                 <h2>v1</h2>
-                <p><small>3-16-2025 // v1</small></p>
+                <p><small>3-16-2025</small></p>
                 <p>stuff that i've done:</p>
                 <div class="extraDiv">
                     <ul>
@@ -32,7 +46,7 @@
                         <li>click power doubler</li>
                     </ul>
                 </div>
-                <p>any the way</p>
+                <p>it took a while</p>
             </article>
         </div>
         

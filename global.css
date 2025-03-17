@@ -1,6 +1,12 @@
+/* font stuffs */
+
 * {
     font-family: Arial, Helvetica, sans-serif
 }
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* point counter */
 
 .pointCounter {
     font-size: 900%;
@@ -16,7 +22,7 @@
     height: 40vw;
     user-select: none;
     -ms-user-select: none;
-    webkit-user-select: none;
+    -webkit-user-select: none;
     transition: width 1s, height 1s;
 }
 
@@ -24,6 +30,8 @@
     width: 43vw;
     height: 43vw;
 }
+
+/* div/containers */
 
 .mainDiv {
     text-align: center;
@@ -40,9 +48,17 @@
     text-align: left;
 }
 
-body {
+.codeDiv {
+    margin: 0 auto 1em auto;
     padding: 0.5em;
+    width: 20em;
+    border: 2px black solid;
+    background-color: rgb(75, 75, 75);
+    text-align: left;
+    color: white;
 }
+
+/* link and button stuffs */
 
 a:link {
     color: rgb(68, 171, 255);
@@ -70,4 +86,10 @@ a:active {
 
 button {
     margin: 2px;
+}
+
+/* misc */
+
+body {
+    padding: 0.5em;
 }
