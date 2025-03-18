@@ -4,8 +4,6 @@
     font-family: Arial, Helvetica, sans-serif
 }
 
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
-
 /* point counter */
 
 .pointCounter {
@@ -13,7 +11,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgb(255, 54, 54), rgb(59, 212, 53));
+    background-image: linear-gradient(rgb(255, 54, 54), rgb(59, 212, 53), rgb(81, 92, 255));
     border: 2px rgb(156, 156, 156) solid;
     border-radius: 15px;
     margin: 0 auto 1em auto;

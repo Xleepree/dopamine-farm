@@ -1,14 +1,18 @@
 
-// points/upgrade variables
+// main variables
 
-let pointsPerClick = 1; // default
+let pointsPerClick = 1; // default click power
 let upgradeCost = 100; // initial cost
+let clickCount = 0; // cps meter idle
+let cps = 0 // clicks per second
 
 // point handling
 
 function increasePoints() {
     let points = Number(document.getElementById("points").innerText);
     document.getElementById("points").innerText = points + pointsPerClick;
+
+    trackCPS();
 }
 
 function savePoints() {
@@ -27,14 +31,19 @@ function loadPoints() {
     upgradeCost = Number(localStorage.getItem("upgradeCost"));
 
     updateUpgradeButton();
+    updateClickPowerDisplay();
 }
 
 function resetPoints() {
-    document.getElementById("points").innerText = 0;
-    pointsPerClick = 1;
-    upgradeCost = 100;
+    let confirmReset = confirm("are you sure?");
+    if (confirmReset == true) {
+        document.getElementById("points").innerText = 0;
+        pointsPerClick = 1;
+        upgradeCost = 100;
 
-    updateUpgradeButton();
+        updateUpgradeButton();
+        updateClickPowerDisplay();
+    }
 }
 
 // upgrade handling
@@ -48,11 +57,30 @@ function upgradeClickPower() {
         upgradeCost *= 2;
 
         updateUpgradeButton();
+        updateClickPowerDisplay();
     } else {
-        alert ("not enough points.")
+        alert("not enough points.")
     }
 }
 
 function updateUpgradeButton() {
     document.getElementById("upgradeButton").innerText = `x2 click power (${upgradeCost})`;
 }
+
+function updateClickPowerDisplay() {
+    document.getElementById("clickPowerDisplay").innerText = `click power: ${pointsPerClick} points`;
+}
+
+// cps meter handling
+
+function trackCPS() {
+    clickCount++;
+}
+
+function updateCPS() {
+    cps = clickCount;
+    clickCount = 0;
+    document.getElementById("cpsMeter").innerText = `CPS: ${cps} (clicks per second)`;
+}
+
+setInterval(updateCPS, 1000); // 1 second loop
