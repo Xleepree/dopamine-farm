@@ -21,12 +21,12 @@
     user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
-    transition: width 1s, height 1s;
+    transition: width 0.2s, height 0.2s;
 }
 
-.pointCounter:hover {
-    width: 43vw;
-    height: 43vw;
+.pointCounter:active {
+    width: 39.5vw;
+    height: 39.5vw;
 }
 
 /* div/containers */
