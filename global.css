@@ -7,7 +7,7 @@
 /* point counter */
 
 .pointCounter {
-    font-size: 900%;
+    font-size: 20vw;
     display: flex;
     justify-content: center;
     align-items: center;
