@@ -8,6 +8,7 @@
     </head>
 
     <body>
+        <img class="capybara" src="images/capybaraFren.png" id="capybara">
         <div class="mainDiv">
             <h1>number clicker</h1>
             <p>clicky for the dopamine</p>
@@ -20,16 +21,55 @@
 
         <div class="mainDiv">
             <p id="clickPowerDisplay">click power: 1 points</p>
+
             <hr>
+
             <button onclick="savePoints()">save points</button>
             <button onclick="loadPoints()">load points</button>
             <button onclick="resetPoints()">reset points</button>
-            <button id="upgradeButton" onclick="upgradeClickPower()">x2 click power (100)</button>
+
             <hr>
+
+            <p>upgrades</p>
+
+            <div class="upgradeDiv" id="steroids" onclick="injectSteroids()">
+                <img class="upgradeImg" src="images/steroids.png">
+                <h2>steroids</h2>
+                <p>doubles click power</p>
+                <p id="steroidsPrice"><small>100 points</small></p>
+            </div>
+
+            <div class="upgradeDiv" id="monkeySlavery" onclick="enslaveMonkey()">
+                <img class="upgradeImg" src="images/slave.png">
+                <h2>monkey slave</h2>
+                <p>enslave a monkey. 100% ethical!<br>
+                <small>or so they say..</small><br>
+                <br>
+                gives you half a point per second (1 point per 2 seconds)</p>
+                <p><small>500 points</small></p>
+            </div>
+
+            <div class="upgradeDiv" id="gambling" onclick="placeholder">
+                <img class="upgradeImg" src="images/gambling.png">
+                <h2>gambling (coming soon)</h2>
+                <p>when in doubt, gamble! you won't lose it all, i promise..<br>
+                <small>Gamble responsibly.</small></p>
+                <p><small>200 points</small></p>
+            </div>
+
+            <div class="upgradeDiv" id="capybaraFren" onclick="revealCapybara()">
+                <img class="upgradeImg" src="images/capybaraFren.png">
+                <h2>capybara fren</h2>
+                <p>elevate your <i>number clicker: clicky for the dopamine</i> experience with a capybara!</p>
+                <p><small>0 points</small></p>
+            </div>
+
+            <hr>
+
             <a href="https://xleepree.pages.dev">made by xleepree</a> //
             <a href="https://github.com/Xleepree/dopamine-farm">repository</a> //
             <a href="changelog.html">changelog</a>
-            <p>v2</p>
+            <p>v3</p>
 
         </div>
     </body>

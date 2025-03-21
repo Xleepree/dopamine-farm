@@ -41,15 +41,31 @@
 .extraDiv {
     margin: 0 auto 1em auto;
     padding: 0.5em;
-    width: 20em;
+    width: 38.75vw;
     border: 2px black solid;
     text-align: left;
+}
+
+.upgradeDiv {
+    margin: 0 auto 1em auto;
+    padding: 0.5em;
+    width: 38.75vw;
+    border: 2px black solid;
+    transition: background-color, 0.1s, width, 0.3s;
+}
+
+.upgradeDiv:active {
+    background-color: lightgray;
+}
+
+.upgradeDiv:hover {
+    width: 36vw;
 }
 
 .codeDiv {
     margin: 0 auto 1em auto;
     padding: 0.5em;
-    width: 20em;
+    width: 38.75vw;
     border: 2px black solid;
     background-color: rgb(75, 75, 75);
     text-align: left;
@@ -90,4 +106,17 @@ button {
 
 body {
     padding: 0.5em;
+}
+
+.upgradeImg {
+    width: 10vw;
+    margin: 1px;
+}
+
+.capybara {
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    width: 15em;
+    opacity: 0;
 }
